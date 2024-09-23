@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Funcional Programming": {
+      "commandName": "Project",
+      "commandLineArgs": "E:/Study/ФП/funcional-programming/large_text_file.txt"
+    }
+  }
+}
