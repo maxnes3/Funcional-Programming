@@ -2,10 +2,9 @@
 module Program2
 
 (*Импорт модулей*)
-open System
 open System.IO
 
-// Функция для подсчета гласных в тексте
+(*Функция для подсчета гласных в тексте*)
 let countVowels (text: string) =
     let vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
     text
@@ -14,7 +13,7 @@ let countVowels (text: string) =
     |> Seq.map (fun (vowel, occurrences) -> vowel, Seq.length occurrences)
     |> Map.ofSeq
 
-// Чтение текста из файла
+(*Чтение текста из файла*)
 let readTextFromFile (filePath: string) =
     if File.Exists(filePath) then
         File.ReadAllText(filePath)
