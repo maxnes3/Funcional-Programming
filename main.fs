@@ -6,6 +6,8 @@ open Program
 open Program2
 open Program3
 open Program4
+open Program5
+open System.IO
 
 (*Начальная точка входа программы*)
 [<EntryPoint>]
@@ -40,7 +42,7 @@ let main argv =
     0*)
 
     (*Лабораторная работа #4*)
-    let emp1 = Employee("John Doe", 1) :> IEmployee
+    (*let emp1 = Employee("John Doe", 1) :> IEmployee
     let emp2 = Employee("Jane Smith", 2) :> IEmployee
     let mgr1 = Manager("Alice Johnson", 3, "Sales") :> IEmployee
     
@@ -52,4 +54,19 @@ let main argv =
     printfn "All Employees in HR Department:"
     hr.GetAllEmployees() |> List.iter (printfn "%s")
 
-    0
+    0*)
+
+    (*Лабораторная работа #5*)
+    let files = [| "file1.txt"; "file2.txt"; "file3.txt" |]
+
+    let totalVowelCounts = processFilesParallel files
+
+    let outputFilePath = "output.txt"
+    use writer = new StreamWriter(outputFilePath)
+    totalVowelCounts |> Map.iter (fun vowel count ->
+        writer.WriteLine(sprintf "%c: %d" vowel count)
+    )
+
+    printfn "Results written to %s" outputFilePath
+
+    0 
