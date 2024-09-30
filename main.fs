@@ -5,6 +5,7 @@ module main
 open Program
 open Program2
 open Program3
+open Program4
 
 (*Начальная точка входа программы*)
 [<EntryPoint>]
@@ -28,12 +29,27 @@ let main argv =
         0*)
 
     (* Лабораторная работа #3 *)
-    let arr = [|1; 4; 16; 3; 6; 5; 8; 7; 10; 9|]
+    (*let arr = [|1; 4; 16; 3; 6; 5; 8; 7; 10; 9|]
     
     printfn "Исходный массив: %A" arr
     
-    let modifiedArr = modifyArray arr
+    modifyArray arr  // Модификация массива на месте
     
-    printfn "Измененный массив: %A" modifiedArr
+    printfn "Измененный массив: %A" arr
     
+    0*)
+
+    (*Лабораторная работа #4*)
+    let emp1 = Employee("John Doe", 1) :> IEmployee
+    let emp2 = Employee("Jane Smith", 2) :> IEmployee
+    let mgr1 = Manager("Alice Johnson", 3, "Sales") :> IEmployee
+    
+    let hr = HRDepartment()
+    hr.AddEmployee(emp1)
+    hr.AddEmployee(emp2)
+    hr.AddEmployee(mgr1)
+
+    printfn "All Employees in HR Department:"
+    hr.GetAllEmployees() |> List.iter (printfn "%s")
+
     0
