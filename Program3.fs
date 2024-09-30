@@ -1,9 +1,6 @@
 ﻿(*Назавание модуля*)
 module Program3
 
-(*Импорт модулей*)
-open System
-
 (*Функция для уменьшения в 2 раза четных элементов, стоящих между нечетными*)
 let modifyArray (arr: int[]) =
     let mutable result = Array.copy arr
