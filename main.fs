@@ -7,6 +7,7 @@ open Program2
 open Program3
 open Program4
 open Program5
+open Program6
 open System.IO
 
 (*Начальная точка входа программы*)
@@ -57,7 +58,7 @@ let main argv =
     0*)
 
     (*Лабораторная работа #5*)
-    let files = [| "file1.txt"; "file2.txt"; "file3.txt" |]
+    (*let files = [| "file1.txt"; "file2.txt"; "file3.txt" |]
 
     let totalVowelCounts = processFilesParallel files
 
@@ -69,4 +70,10 @@ let main argv =
 
     printfn "Results written to %s" outputFilePath
 
-    0 
+    0 *)
+
+    (*Лабораторная работа #6*)
+    let iterations = 3
+    printIterations axiom iterations
+
+    0
